@@ -21,6 +21,11 @@ defineProps({
 })
 
 const state = reactive({ count: 0 })
+
+fetch("https://vax-worker.capella.workers.dev").then(response => {
+  response.json().then(data=>console.log(data))
+})
+
 </script>
 
 <style scoped>
